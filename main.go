@@ -42,7 +42,7 @@ func getHostPubkeyCallback(hostPublicKeyPath string, allowInsecureHostkey bool) 
 		return ssh.InsecureIgnoreHostKey(), nil
 	}
 
-	keyBytes, err := ioutil.ReadFile(HOST_PUBLIC_KEY)
+	keyBytes, err := ioutil.ReadFile(hostPublicKeyPath)
 	if err != nil {
 		return nil, err
 	}
